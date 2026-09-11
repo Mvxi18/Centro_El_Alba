@@ -257,6 +257,10 @@
       border: 1.5px solid #e8e8e8;
       border-radius: var(--radius);
       padding: 1rem;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       font-size: 0.88rem;
       font-weight: 600;
@@ -264,6 +268,8 @@
       transition: border-color 0.2s, box-shadow 0.2s;
     }
     .isapre-badge:hover { border-color: var(--alba-dawn); box-shadow: var(--shadow); }
+    .isapre-logo { max-width: 100%; max-height: 46px; width: auto; object-fit: contain; }
+    .isapres-nota { font-size: 0.85rem; color: #999; text-align: center; margin-top: -0.5rem; }
 
 
     /* ── Galería ── */
@@ -761,15 +767,16 @@
         <h3 style="font-size:1.3rem; font-weight:700; color:var(--alba-dark);">Trabajamos con todas las ISAPREs</h3>
       </div>
       <div class="isapres-grid">
-        <div class="isapre-badge">Banmédica</div>
-        <div class="isapre-badge">Colmena</div>
-        <div class="isapre-badge">Consalud</div>
-        <div class="isapre-badge">Cruz Blanca</div>
-        <div class="isapre-badge">Vida Tres</div>
-        <div class="isapre-badge">Nueva Masvida</div>
-        <div class="isapre-badge">Esencial</div>
+        <div class="isapre-badge"><img class="isapre-logo" loading="lazy" decoding="async" src="Recursos/Logos%20Isapres/banmedica-logo.png" alt="Banmédica" /></div>
+        <div class="isapre-badge"><img class="isapre-logo" loading="lazy" decoding="async" src="Recursos/Logos%20Isapres/colmena.png" alt="Colmena" /></div>
+        <div class="isapre-badge"><img class="isapre-logo" loading="lazy" decoding="async" src="Recursos/Logos%20Isapres/consalud.png" alt="Consalud" /></div>
+        <div class="isapre-badge"><img class="isapre-logo" loading="lazy" decoding="async" src="Recursos/Logos%20Isapres/cruzblanca.png" alt="Cruz Blanca" /></div>
+        <div class="isapre-badge"><img class="isapre-logo" loading="lazy" decoding="async" src="Recursos/Logos%20Isapres/vidatres.png" alt="Vida Tres" /></div>
+        <div class="isapre-badge"><img class="isapre-logo" loading="lazy" decoding="async" src="Recursos/Logos%20Isapres/masvida.png" alt="Nueva Masvida" /></div>
+        <div class="isapre-badge"><img class="isapre-logo" loading="lazy" decoding="async" src="Recursos/Logos%20Isapres/esencial-recortado.png" alt="Esencial" /></div>
         <div class="isapre-badge">Y todas las demás</div>
       </div>
+      <p class="isapres-nota">Emitimos boleta electrónica reembolsable en cualquier ISAPRE, según la cobertura de tu plan.</p>
 
     </div>
   </section>
