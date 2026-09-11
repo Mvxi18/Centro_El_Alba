@@ -4,6 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Centro El Alba – Salud Integral en Maipú</title>
+  <meta name="description" content="Centro de desarrollo integral en Maipú. Psicología, Fonoaudiología, Terapia Ocupacional y Nutrición para niños, adolescentes y adultos. Atendemos FONASA e ISAPREs." />
+  <meta name="theme-color" content="#E76F51" />
+  <link rel="icon" href="Recursos/LOGO%20CENTRO/foto%20sin%20fondo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="Recursos/LOGO%20CENTRO/foto%20sin%20fondo.png" />
+
+  <!-- og:url y og:image deben pasar a URL absolutas cuando el sitio tenga dominio: los scrapers de WhatsApp/Facebook ignoran rutas relativas -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="Centro El Alba" />
+  <meta property="og:title" content="Centro El Alba – Salud Integral en Maipú" />
+  <meta property="og:description" content="Psicología, Fonoaudiología, Terapia Ocupacional y Nutrición para toda la familia. Hernán Olguín 136, Maipú." />
+  <meta property="og:image" content="Recursos/Portada%20del%20centro.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Centro El Alba – Salud Integral en Maipú" />
+  <meta name="twitter:description" content="Psicología, Fonoaudiología, Terapia Ocupacional y Nutrición para toda la familia. Hernán Olguín 136, Maipú." />
+  <meta name="twitter:image" content="Recursos/Portada%20del%20centro.jpeg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Centro El Alba",
+    "alternateName": "Centro de Desarrollo Integral El Alba",
+    "description": "Centro de desarrollo integral en Maipú: Psicología, Fonoaudiología, Terapia Ocupacional y Nutrición.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hernán Olguín 136",
+      "addressLocality": "Maipú",
+      "addressRegion": "Región Metropolitana",
+      "addressCountry": "CL"
+    },
+    "telephone": "+56972342849",
+    "email": "contacto.centroelalba@gmail.com",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ],
+    "availableService": [
+      { "@type": "MedicalTherapy", "name": "Psicología" },
+      { "@type": "MedicalTherapy", "name": "Fonoaudiología" },
+      { "@type": "MedicalTherapy", "name": "Terapia Ocupacional" },
+      { "@type": "MedicalTherapy", "name": "Nutrición" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/centroelalba/",
+      "https://www.facebook.com/Centrodedesarrollointegralelalba",
+      "https://www.tiktok.com/@centroelalba1"
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -317,7 +377,7 @@
       <li><a href="#evaluaciones">Evaluaciones</a></li>
       <li><a href="#aranceles">Aranceles</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a href="[RESERVO_LINK]" class="nav-cta" target="_blank" rel="noopener">📅 Reservar Hora</a></li>
+      <li><a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="general" class="nav-cta" target="_blank" rel="noopener">📅 Reservar Hora</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -341,7 +401,7 @@
         <span class="specialty-badge">📋 Evaluaciones</span>
       </div>
       <div class="hero-buttons">
-        <a href="[RESERVO_LINK]" class="btn btn-primary" target="_blank" rel="noopener">📅 Reservar Hora</a>
+        <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="general" class="btn btn-primary" target="_blank" rel="noopener">📅 Reservar Hora</a>
         <a href="#quienes-somos" class="btn btn-outline">Conocer más</a>
       </div>
     </div>
@@ -471,7 +531,7 @@
 
         <!-- PSICOLOGÍA -->
         <div class="pro-card" data-especialidad="psicologia" data-dias="">
-          <div class="pro-card-img"><img src="Recursos/Trabajadores/Marta%20Ibarra%20Psicologa%2C%20Due%C3%B1a.jpeg" alt="Marta Ibarra"></div>
+          <div class="pro-card-img"><img loading="lazy" decoding="async" src="Recursos/Trabajadores/Marta%20Ibarra%20Psicologa%2C%20Due%C3%B1a.jpeg" alt="Marta Ibarra"></div>
           <div class="pro-card-body">
             <p class="pro-card-role">Psicología</p>
             <h3 class="pro-card-name">Marta Ibarra</h3>
@@ -480,12 +540,12 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="[RESERVO_LINK]" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="marta-ibarra" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
         <div class="pro-card" data-especialidad="psicologia" data-dias="">
-          <div class="pro-card-img"><img src="Recursos/Trabajadores/Alejandro%20Gonzales.jpeg" alt="Alejandro González"></div>
+          <div class="pro-card-img"><img loading="lazy" decoding="async" src="Recursos/Trabajadores/Alejandro%20Gonzales.jpeg" alt="Alejandro González"></div>
           <div class="pro-card-body">
             <p class="pro-card-role">Psicología</p>
             <h3 class="pro-card-name">Alejandro González</h3>
@@ -494,13 +554,13 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="[RESERVO_LINK]" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="alejandro-gonzalez" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
         <!-- TERAPIA OCUPACIONAL -->
         <div class="pro-card" data-especialidad="to" data-dias="">
-          <div class="pro-card-img"><img src="Recursos/Trabajadores/Yulissa%20D%C3%ADaz.jpeg" alt="Yulissa Díaz"></div>
+          <div class="pro-card-img"><img loading="lazy" decoding="async" src="Recursos/Trabajadores/Yulissa%20D%C3%ADaz.jpeg" alt="Yulissa Díaz"></div>
           <div class="pro-card-body">
             <p class="pro-card-role">Terapia Ocupacional</p>
             <h3 class="pro-card-name">Yulissa Díaz</h3>
@@ -509,12 +569,12 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="[RESERVO_LINK]" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="yulissa-diaz" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
         <div class="pro-card" data-especialidad="to" data-dias="">
-          <div class="pro-card-img"><img src="Recursos/Trabajadores/Camilo%20Reyes.jpeg" alt="Camilo Reyes"></div>
+          <div class="pro-card-img"><img loading="lazy" decoding="async" src="Recursos/Trabajadores/Camilo%20Reyes.jpeg" alt="Camilo Reyes"></div>
           <div class="pro-card-body">
             <p class="pro-card-role">Terapia Ocupacional</p>
             <h3 class="pro-card-name">Camilo Reyes</h3>
@@ -523,13 +583,13 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="[RESERVO_LINK]" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="camilo-reyes" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
         <!-- NUTRICIÓN -->
         <div class="pro-card" data-especialidad="nutricion" data-dias="">
-          <div class="pro-card-img"><img src="Recursos/Trabajadores/Jacinta%20Nutrcionista.jpeg" alt="Jacinta Legarreta"></div>
+          <div class="pro-card-img"><img loading="lazy" decoding="async" src="Recursos/Trabajadores/Jacinta%20Nutrcionista.jpeg" alt="Jacinta Legarreta"></div>
           <div class="pro-card-body">
             <p class="pro-card-role">Nutrición</p>
             <h3 class="pro-card-name">Jacinta Legarreta</h3>
@@ -538,13 +598,13 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="[RESERVO_LINK]" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="jacinta-legarreta" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
         <!-- FONOAUDIOLOGÍA -->
         <div class="pro-card" data-especialidad="fono" data-dias="">
-          <div class="pro-card-img"><img src="Recursos/Trabajadores/Maria%20Victoria.jpeg" alt="María Victoria Motta"></div>
+          <div class="pro-card-img"><img loading="lazy" decoding="async" src="Recursos/Trabajadores/Maria%20Victoria.jpeg" alt="María Victoria Motta"></div>
           <div class="pro-card-body">
             <p class="pro-card-role">Fonoaudiología</p>
             <h3 class="pro-card-name">María Victoria Motta</h3>
@@ -553,12 +613,12 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="[RESERVO_LINK]" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="maria-victoria-motta" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
         <div class="pro-card" data-especialidad="fono" data-dias="">
-          <div class="pro-card-img"><img src="Recursos/Trabajadores/Pamela%20Aguilera.jpeg" alt="Pamela Aguilera"></div>
+          <div class="pro-card-img"><img loading="lazy" decoding="async" src="Recursos/Trabajadores/Pamela%20Aguilera.jpeg" alt="Pamela Aguilera"></div>
           <div class="pro-card-body">
             <p class="pro-card-role">Fonoaudiología</p>
             <h3 class="pro-card-name">Pamela Aguilera</h3>
@@ -567,7 +627,7 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="[RESERVO_LINK]" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="pamela-aguilera" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
@@ -726,13 +786,13 @@
         <p>Nuestras salas están pensadas para distintas edades y modalidades de atención: espacios de consulta individual, sala de espera familiar y ambientes especialmente diseñados para trabajo con niños.</p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="Recursos/Fotos%20espacio%20fisico/Sala%201.jpeg" alt="Sala de atención 1" /></div>
-        <div class="gallery-item"><img src="Recursos/Fotos%20espacio%20fisico/Sala%202.jpeg" alt="Sala de atención 2" /></div>
-        <div class="gallery-item"><img src="Recursos/Fotos%20espacio%20fisico/Sala%202.1.jpeg" alt="Sala de atención 2" /></div>
-        <div class="gallery-item"><img src="Recursos/Fotos%20espacio%20fisico/Sala3.jpeg" alt="Sala de atención 3" /></div>
-        <div class="gallery-item"><img src="Recursos/Fotos%20espacio%20fisico/Sala4.jpeg" alt="Sala de atención 4" /></div>
-        <div class="gallery-item"><img src="Recursos/Fotos%20espacio%20fisico/Sala%20Psicologia.jpeg" alt="Sala de Psicología" /></div>
-        <div class="gallery-item"><img src="Recursos/Fotos%20espacio%20fisico/Sala%20Psicologia2.jpeg" alt="Sala de Psicología" /></div>
+        <div class="gallery-item"><img loading="lazy" decoding="async" src="Recursos/Fotos%20espacio%20fisico/Sala%201.jpeg" alt="Sala de atención 1" /></div>
+        <div class="gallery-item"><img loading="lazy" decoding="async" src="Recursos/Fotos%20espacio%20fisico/Sala%202.jpeg" alt="Sala de atención 2" /></div>
+        <div class="gallery-item"><img loading="lazy" decoding="async" src="Recursos/Fotos%20espacio%20fisico/Sala%202.1.jpeg" alt="Sala de atención 2" /></div>
+        <div class="gallery-item"><img loading="lazy" decoding="async" src="Recursos/Fotos%20espacio%20fisico/Sala3.jpeg" alt="Sala de atención 3" /></div>
+        <div class="gallery-item"><img loading="lazy" decoding="async" src="Recursos/Fotos%20espacio%20fisico/Sala4.jpeg" alt="Sala de atención 4" /></div>
+        <div class="gallery-item"><img loading="lazy" decoding="async" src="Recursos/Fotos%20espacio%20fisico/Sala%20Psicologia.jpeg" alt="Sala de Psicología" /></div>
+        <div class="gallery-item"><img loading="lazy" decoding="async" src="Recursos/Fotos%20espacio%20fisico/Sala%20Psicologia2.jpeg" alt="Sala de Psicología" /></div>
       </div>
     </div>
   </section>
@@ -813,7 +873,7 @@
       <h2 class="section-title">Reserva tu hora</h2>
       <p>Agenda directamente en línea con el profesional que necesitas. Elige el día y horario que más te acomode.</p>
       <div class="agenda-buttons">
-        <a href="[RESERVO_LINK]" class="btn btn-primary" target="_blank" rel="noopener">📅 Reservar Hora en Línea</a>
+        <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="general" class="btn btn-primary" target="_blank" rel="noopener">📅 Reservar Hora en Línea</a>
         <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-outline-white" target="_blank" rel="noopener">💬 Escribir por WhatsApp</a>
       </div>
       <p class="agenda-note">Lunes a Viernes 9:00–18:30 · Sábados 9:00–14:00</p>
@@ -922,6 +982,24 @@
   </footer>
 
   <script>
+    // Links de Reservo. Pega aquí la URL de cada agenda y el botón correspondiente
+    // la usará automáticamente; los que queden vacíos siguen abriendo WhatsApp.
+    const RESERVO_LINKS = {
+      'general':              '',
+      'marta-ibarra':         '',
+      'alejandro-gonzalez':   '',
+      'yulissa-diaz':         '',
+      'camilo-reyes':         '',
+      'jacinta-legarreta':    '',
+      'maria-victoria-motta': '',
+      'pamela-aguilera':      ''
+    };
+
+    document.querySelectorAll('[data-reservo]').forEach(link => {
+      const url = RESERVO_LINKS[link.dataset.reservo];
+      if (url) link.href = url;
+    });
+
     // Hamburger
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
