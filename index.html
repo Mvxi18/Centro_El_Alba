@@ -351,10 +351,28 @@
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
-      #hero { grid-template-columns: 1fr; padding: 6rem 2rem 3rem; text-align: center; }
+      #hero { grid-template-columns: 1fr; padding: 5.5rem 2rem 2.5rem; text-align: center; gap: 2rem; min-height: auto; }
+      .hero-logo img { max-height: 110px; object-position: center; margin: 0 auto; }
       .hero-specialties { justify-content: center; }
       .hero-buttons { justify-content: center; }
-      .hero-visual { display: none !important; }
+      #hero > .hero-text > p { margin-left: auto; margin-right: auto; }
+      /* En una sola columna la imagen deja de estar pegada al borde derecho */
+      .hero-img-wrap { border-radius: 20px; min-height: 0; }
+      .hero-img-wrap img.hero-photo { height: 260px; }
+    }
+    @media (max-width: 600px) {
+      #hero { padding: 5rem 1.25rem 2rem; gap: 1.5rem; }
+      .hero-logo { margin-bottom: 0.5rem; }
+      .hero-logo img { max-height: 84px; }
+      #hero h1 { font-size: 1.75rem; margin-bottom: 0.6rem; }
+      /* Los saltos de línea del título están pensados para desktop y descuadran el texto en pantalla angosta */
+      #hero h1 br { display: none; }
+      #hero > .hero-text > p { font-size: 0.98rem; margin-bottom: 1rem; }
+      .hero-specialties { gap: 0.4rem; margin-bottom: 1rem; }
+      .specialty-badge { font-size: 0.75rem; padding: 0.28rem 0.7rem; }
+      .hero-buttons { gap: 0.6rem; }
+      .hero-buttons .btn { flex: 1 1 100%; }
+      .hero-img-wrap img.hero-photo { height: 200px; }
     }
     @media (max-width: 768px) {
       nav ul { display: none; }
@@ -397,7 +415,7 @@
         <img src="Recursos/LOGO%20CENTRO/foto%20sin%20fondo.png" alt="Centro El Alba" />
       </div>
       <div class="hero-badge">Centro Integral de Salud · Maipú</div>
-      <h1>Donde el bienestar<br>de tu familia encuentra<br>un <em>lugar cercano</em></h1>
+      <h1>Donde el bienestar <br>de tu familia encuentra <br>un <em>lugar cercano</em></h1>
       <p>Centro de desarrollo integral. Atención profesional, cercana y coordinada para cada etapa de la vida.</p>
       <div class="hero-specialties">
         <span class="specialty-badge">🧠 Psicología</span>
