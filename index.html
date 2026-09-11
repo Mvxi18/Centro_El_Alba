@@ -132,7 +132,9 @@
     #hero > .hero-text > p { font-size: 1.05rem; color: #666; margin-bottom: 1.2rem; max-width: 460px; }
     .hero-specialties { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
     .specialty-badge { background: rgba(69,123,157,0.1); color: var(--alba-teal); font-size: 0.82rem; font-weight: 600; padding: 0.3rem 0.85rem; border-radius: 50px; }
-    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hero-link { color: #8a8178; font-weight: 600; font-size: 0.95rem; text-decoration: none; border-bottom: 1px solid rgba(138,129,120,0.4); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+    .hero-link:hover { color: var(--alba-dark); border-bottom-color: var(--alba-dark); }
     .hero-visual { position: relative; z-index: 1; display: flex; }
     .hero-img-wrap {
       border-radius: 20px 0 0 20px;
@@ -371,7 +373,9 @@
       .hero-specialties { gap: 0.4rem; margin-bottom: 1rem; }
       .specialty-badge { font-size: 0.75rem; padding: 0.28rem 0.7rem; }
       .hero-buttons { gap: 0.6rem; }
-      .hero-buttons .btn { flex: 1 1 100%; }
+      /* Lado a lado en vez de apilados: con tres acciones, apilarlas empujaba el CTA fuera de pantalla */
+      .hero-buttons .btn { flex: 1 1 calc(50% - 0.3rem); padding: 0.8rem 0.5rem; font-size: 0.92rem; }
+      .hero-link { flex: 1 1 100%; text-align: center; }
       .hero-img-wrap img.hero-photo { height: 200px; }
     }
     @media (max-width: 768px) {
@@ -426,7 +430,8 @@
       </div>
       <div class="hero-buttons">
         <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="general" class="btn btn-primary" target="_blank" rel="noopener">📅 Reservar Hora</a>
-        <a href="#quienes-somos" class="btn btn-outline">Conocer más</a>
+        <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-whatsapp" target="_blank" rel="noopener">📲 WhatsApp</a>
+        <a href="#quienes-somos" class="hero-link">Conocer más</a>
       </div>
     </div>
 
