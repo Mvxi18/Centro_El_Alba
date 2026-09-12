@@ -88,7 +88,7 @@
     /* ── Nav ── */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,248,240,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(244,162,97,0.2); display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 2.5rem; }
     .nav-logo img { height: 42px; width: auto; display: block; }
-    nav ul { list-style: none; display: flex; gap: 1.4rem; align-items: center; }
+    nav ul { list-style: none; display: flex; gap: 1rem; align-items: center; }
     nav a { text-decoration: none; color: var(--alba-dark); font-weight: 500; font-size: 0.85rem; transition: color 0.2s; white-space: nowrap; }
     nav a:hover { color: var(--alba-warm); }
     .nav-cta { background: var(--alba-warm) !important; color: #fff !important; padding: 0.45rem 1.1rem; border-radius: 50px; font-weight: 600 !important; }
@@ -378,16 +378,22 @@
       .hero-specialties { gap: 0.4rem; margin-bottom: 1rem; }
       .specialty-badge { font-size: 0.75rem; padding: 0.28rem 0.7rem; }
       .hero-buttons { gap: 0.6rem; }
-      /* Lado a lado en vez de apilados: con tres acciones, apilarlas empujaba el CTA fuera de pantalla */
-      .hero-buttons .btn { flex: 1 1 calc(50% - 0.3rem); padding: 0.8rem 0.5rem; font-size: 0.92rem; }
+      .hero-buttons .btn { flex: 1 1 100%; padding: 0.8rem 0.5rem; font-size: 0.95rem; }
       .hero-link { flex: 1 1 100%; text-align: center; }
       .hero-img-wrap img.hero-photo { height: 200px; }
     }
-    @media (max-width: 768px) {
+    /* El menú completo necesita ~1130px; bajo eso pasa a hamburguesa o el CTA se sale y la página scrollea horizontal */
+    @media (max-width: 1150px) {
       nav ul { display: none; }
-      nav ul.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(255,248,240,0.98); padding: 1rem 2rem; gap: 1rem; border-bottom: 1px solid rgba(244,162,97,0.2); }
+      /* Fondo opaco y z-index propio: el backdrop-filter del nav hace que un fondo translúcido deje ver el hero a través del menú */
+      nav ul.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; z-index: 200; background: #FFF8F0; padding: 1rem 2rem; gap: 1rem; border-bottom: 1px solid rgba(244,162,97,0.2); box-shadow: 0 12px 28px rgba(38,70,83,0.12); }
       .hamburger { display: flex; }
+    }
+    /* Bajo ~900px el formulario de contacto no cabe en dos columnas y desborda la página (p. ej. iPad vertical, 820px) */
+    @media (max-width: 900px) {
       #contacto .grid, #ubicacion .grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
       .form-row { grid-template-columns: 1fr; }
       .agenda-buttons { flex-direction: column; align-items: center; }
       .quote-block { padding: 2rem 1.5rem; }
@@ -406,11 +412,15 @@
     </div>
     <ul id="nav-menu">
       <li><a href="#quienes-somos">Quiénes Somos</a></li>
+      <li><a href="#especialidades">Especialidades</a></li>
       <li><a href="#profesionales">Profesionales</a></li>
       <li><a href="#evaluaciones">Evaluaciones</a></li>
       <li><a href="#aranceles">Aranceles</a></li>
+      <li><a href="#galeria">Nuestro Espacio</a></li>
+      <li><a href="#politicas">Políticas</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="general" class="nav-cta" target="_blank" rel="noopener">📅 Reservar Hora</a></li>
+      <li><a href="https://wa.me/message/HCYWC2VJFMPQI1" class="nav-cta" target="_blank" rel="noopener">📲 Reservar Hora</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -434,8 +444,7 @@
         <span class="specialty-badge">📋 Evaluaciones</span>
       </div>
       <div class="hero-buttons">
-        <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="general" class="btn btn-primary" target="_blank" rel="noopener">📅 Reservar Hora</a>
-        <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-whatsapp" target="_blank" rel="noopener">📲 WhatsApp</a>
+        <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-whatsapp" target="_blank" rel="noopener">📲 Reservar por WhatsApp</a>
         <a href="#quienes-somos" class="hero-link">Conocer más</a>
       </div>
     </div>
@@ -565,16 +574,16 @@
 
         <!-- PSICOLOGÍA -->
         <div class="pro-card" data-especialidad="psicologia" data-dias="">
-          <div class="pro-card-img"><img loading="lazy" decoding="async" src="Recursos/Trabajadores/Marta%20Ibarra%20Psicologa%2C%20Due%C3%B1a.jpeg" alt="Marta Ibarra"></div>
+          <div class="pro-card-img"><img loading="lazy" decoding="async" src="Recursos/Trabajadores/Marta%20Ibarra%20Psicologa%2C%20Due%C3%B1a.jpeg" alt="Marta Ibarra Peña"></div>
           <div class="pro-card-body">
-            <p class="pro-card-role">Psicología</p>
-            <h3 class="pro-card-name">Marta Ibarra</h3>
-            <p class="pro-card-desc">Psicóloga Clínica con más de 10 años de experiencia en el acompañamiento de niños, adolescentes, adultos y familias, desde un enfoque sistémico. Titulada de la Universidad Santo Tomás, con formación en psicoterapia breve, salud mental infantil, terapia de pareja, ansiedad, depresión, trastornos de la conducta alimentaria y TEA.</p>
+            <p class="pro-card-role">Psicología · Fundadora y Directora</p>
+            <h3 class="pro-card-name">Marta Ibarra Peña</h3>
+            <p class="pro-card-desc">Psicóloga Clínica con más de 12 años de experiencia en intervención y acompañamiento psicológico. Diplomada en Intervención con Jóvenes y Adolescentes y egresada del Magíster en la misma área, con formación complementaria en ansiedad, depresión, duelo, terapia de parejas, psicoterapia breve, trauma, TEA y trastornos de la conducta alimentaria. Como fundadora de Centro El Alba, busca ofrecer una atención profesional, humana y coordinada para niños, adolescentes, adultos y familias.</p>
             <p class="pro-avail-label">Disponibilidad</p>
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="marta-ibarra" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
@@ -588,7 +597,7 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="alejandro-gonzalez" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
@@ -603,7 +612,7 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="yulissa-diaz" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
@@ -617,7 +626,7 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="camilo-reyes" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
@@ -632,7 +641,7 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="jacinta-legarreta" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
@@ -647,7 +656,7 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="maria-victoria-motta" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
@@ -661,7 +670,7 @@
             <div class="availability-days">
               <span class="day-badge">Consultar disponibilidad</span>
             </div>
-            <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="pamela-aguilera" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
+            <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Reservar Hora</a>
           </div>
         </div>
 
@@ -784,7 +793,6 @@
             <li><strong>Efectivo</strong></li>
             <li><strong>Transferencia bancaria</strong></li>
             <li><strong>Débito y crédito</strong></li>
-            <li><strong>Pago online:</strong> A través de Reservo al agendar</li>
           </ul>
         </div>
       </div>
@@ -855,7 +863,7 @@
           <h3>Cancelaciones y Reagendamiento</h3>
           <ul>
             <li>Las cancelaciones deben realizarse con al menos <strong>12 horas de anticipación</strong>.</li>
-            <li>Puedes reagendar a través de Reservo o escribiéndonos por WhatsApp.</li>
+            <li>Puedes reagendar escribiéndonos por WhatsApp.</li>
           </ul>
         </div>
         <div class="politica-card">
@@ -906,10 +914,9 @@
     <div class="container">
       <p class="section-tag">¿Listo para empezar?</p>
       <h2 class="section-title">Reserva tu hora</h2>
-      <p>Agenda directamente en línea con el profesional que necesitas. Elige el día y horario que más te acomode.</p>
+      <p>Escríbenos por WhatsApp y coordinamos tu hora con el profesional que necesitas, en el día y horario que más te acomode.</p>
       <div class="agenda-buttons">
-        <a href="https://wa.me/message/HCYWC2VJFMPQI1" data-reservo="general" class="btn btn-primary" target="_blank" rel="noopener">📅 Reservar Hora en Línea</a>
-        <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-outline-white" target="_blank" rel="noopener">💬 Escribir por WhatsApp</a>
+        <a href="https://wa.me/message/HCYWC2VJFMPQI1" class="btn btn-whatsapp" target="_blank" rel="noopener">📲 Reservar por WhatsApp</a>
       </div>
       <p class="agenda-note">Lunes a Viernes 9:00–18:30 · Sábados 9:00–14:00</p>
     </div>
@@ -1017,24 +1024,6 @@
   </footer>
 
   <script>
-    // Links de Reservo. Pega aquí la URL de cada agenda y el botón correspondiente
-    // la usará automáticamente; los que queden vacíos siguen abriendo WhatsApp.
-    const RESERVO_LINKS = {
-      'general':              'https://agendamiento.reservo.cl/makereserva/agenda/L0F6q8T0C0zEhs6y3o71HNC5w2A4tz',
-      'marta-ibarra':         'https://agendamiento.reservo.cl/makereserva/agenda/L0F6q8T0C0zEhs6y3o71HNC5w2A4tz',
-      'alejandro-gonzalez':   'https://agendamiento.reservo.cl/makereserva/agenda/L0F6q8T0C0zEhs6y3o71HNC5w2A4tz',
-      'yulissa-diaz':         '',
-      'camilo-reyes':         '',
-      'jacinta-legarreta':    '',
-      'maria-victoria-motta': '',
-      'pamela-aguilera':      ''
-    };
-
-    document.querySelectorAll('[data-reservo]').forEach(link => {
-      const url = RESERVO_LINKS[link.dataset.reservo];
-      if (url) link.href = url;
-    });
-
     // Hamburger
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
